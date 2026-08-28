@@ -7,15 +7,14 @@
 // ==/UserScript==
 
 function doIt () {
-	if(healthcritical) {
-		curLife = healthcritical.innerHTML;
-	} else if(healthmed) {
-		curLife = healthmed.innerHTML;
-	} else {
-		curLife = healthok.innerHTML;
-	}
-
-	curLife = curLife.substring(3, curLife.length - 4);
+    if(healthcritical) {
+        curLife = healthcritical.innerText;
+    } else if(healthmed) {
+        curLife = healthmed.innerText;
+    } else {
+        curLife = healthok.innerText;
+    }
+    curLife = parseInt(curLife, 10);
 
 	if(! document.getElementById("lifedisp")) {
 		content = rawLife.innerHTML;
@@ -26,7 +25,7 @@ function doIt () {
 		content = content.substring(0, content.length - newContent.length);
 	}
 
-	maxLife = content.substring(content.indexOf("span>/") + 6, content.length - 1);
+	maxLife = parseInt(document.getElementById("itemlpdisp").innerText.split("/")[1], 10);
 
 	if(curLife <= maxLife / 6) {
 		status = 3;
