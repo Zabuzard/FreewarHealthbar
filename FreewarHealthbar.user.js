@@ -39,7 +39,7 @@ function doIt () {
 
 	if(! document.getElementById("lifedisp")) {
 		newContent = '<div style="display: inline-block; margin: 0px 5px; position: relative; font-size: 9px; width: ' + width + 'px; height: 11px;" id="lifedisp" class="small">' +
-					'<div style="position: absolute; top: 0px; left: 0px; width: ' + width + 'px; height: 11px; z-index: 2; border: 1px solid rgb(7, 100, 179); background: linear-gradient(to bottom, #eee, #bbb);" id="fulllifedisp">' +
+					'<div style="position: absolute; top: 0px; left: 0px; width: ' + width + 'px; height: 11px; z-index: 2; border: 1px solid rgb(7, 100, 179); background: linear-gradient(to bottom, #252525, #111111);" id="fulllifedisp">' +
 					'</div>' +
 					'<div style="position: absolute; top: 0px; left: 0px; width: ' + curWidth + 'px; height: 11px; z-index: 3; border: 1px solid rgb(7, 100, 179); background: ' + getHealthColor(status) + ';" id="curlife">' +
 					'</div>' +
@@ -59,11 +59,11 @@ function doIt () {
 /* CSS color for each health status */
 function getHealthColor(status) {
 	if(status == 1) {
-		return "linear-gradient(to bottom, #66dd66, #229922)";
+		return "linear-gradient(to bottom, #4caf50, #1b6e2a)";
 	} else if(status == 2) {
-		return "linear-gradient(to bottom, #ffcc55, #dd8800)";
+		return "linear-gradient(to bottom, #e0a52b, #8a5a00)";
 	} else {
-		return "linear-gradient(to bottom, #ff6666, #bb0000)";
+		return "linear-gradient(to bottom, #e05252, #8f2020)";
 	}
 }
 
