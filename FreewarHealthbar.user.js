@@ -71,7 +71,7 @@ function getHealthColor(status) {
 /* ======Begin====== */
 
 // Vars
-var width = 85;
+var width = 80;
 var curWidth = 0;
 var curLife = 0;
 var maxLife = 0;
