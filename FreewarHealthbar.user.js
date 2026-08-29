@@ -14,7 +14,7 @@ function doIt () {
     } else {
         curLife = healthok.innerText;
     }
-    curLife = parseInt(curLife, 10);
+    curLife = parseInt(curLife.replace(/\./g, ""), 10);
 
 	if(! document.getElementById("lifedisp")) {
 		content = rawLife.innerHTML;
@@ -25,7 +25,7 @@ function doIt () {
 		content = content.substring(0, content.length - newContent.length);
 	}
 
-	maxLife = parseInt(document.getElementById("itemlpdisp").innerText.split("/")[1], 10);
+	maxLife = parseInt(document.getElementById("itemlpdisp").innerText.split("/")[1].replace(/\./g, ""), 10);
 
 	if(curLife <= maxLife / 6) {
 		status = 3;
